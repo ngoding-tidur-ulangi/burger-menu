@@ -1,0 +1,312 @@
+:root {
+    --width-menu: 480px;
+    --height-menu: 400px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Signika Negative", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+}
+
+.burger-menu {
+    width: var(--width-menu);
+    height: var(--height-menu);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.burger-menu-open {
+    height: calc(var(--height-menu) / 5 * 10);
+}
+
+.upper-bread {
+    position: relative;
+    width: 100%;
+    height: calc(var(--width-menu) / 60 * 18);
+    background-color: #f5b400;
+    border-radius: calc(var(--width-menu) / 2) calc(var(--width-menu) / 2) calc(var(--width-menu) / 60 * 2) calc(var(--width-menu) / 60 * 2);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.upper-bread .light {
+    position: absolute;
+    top: calc(-1 * var(--width-menu) / 60 * 57);
+    left: calc(-1 * var(--width-menu) / 60 * 30);
+    width: calc(var(--width-menu) / 6 * 7);
+    height: calc(var(--width-menu) / 6 * 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f8ca2f;
+    transition-duration: 0.7s;
+}
+
+.burger-menu:hover .upper-bread .light {
+    left: calc(var(--width-menu) / 60 * 24);
+}
+
+.upper-bread .light div {
+    width: var(--width-menu);
+    height: var(--width-menu);
+    border-radius: 50%;
+    background-color: #fada73;
+}
+
+.upper-bread .dot {
+    position: absolute;
+    width: var(--width-menu);
+    height: calc(var(--width-menu) / 60 * 18);
+    z-index: 1;
+}
+
+.upper-bread .dot span {
+    position: absolute;
+    display: block;
+    width: calc(var(--width-menu) / 12);
+    height: calc(var(--width-menu) / 30);
+    border-radius: 50%;
+    background-color: #fefbc4;
+    box-shadow: 2px 2px 3px 2px #cc9041;
+}
+
+.upper-bread .dot span:first-child {
+    top: calc(var(--width-menu) / 6);
+    left: calc(var(--width-menu) / 6 * 5);
+    rotate: -10deg;
+}
+
+.upper-bread .dot span:nth-child(2) {
+    top: calc(var(--width-menu) / 60 * 5);
+    left: calc(var(--width-menu) / 60 * 45);
+    rotate: 20deg;
+}
+
+.upper-bread .dot span:nth-child(3) {
+    top: calc(var(--width-menu) / 60 * 3);
+    left: calc(var(--width-menu) / 60 * 36);
+    rotate: -10deg;
+}
+
+.upper-bread .dot span:nth-child(4) {
+    top: calc(var(--width-menu) / 60 * 12);
+    left: calc(var(--width-menu) / 60 * 40);
+    rotate: 20deg;
+}
+
+.upper-bread .dot span:nth-child(5) {
+    top: calc(var(--width-menu) / 60 * 8);
+    left: calc(var(--width-menu) / 60 * 30);
+    rotate: -20deg;
+}
+
+.upper-bread .dot span:nth-child(6) {
+    top: calc(var(--width-menu) / 60 * 10);
+    left: calc(var(--width-menu) / 60 * 20);
+    rotate: -10deg;
+}
+
+.upper-bread .dot span:nth-child(7) {
+    top: calc(var(--width-menu) / 60 * 3);
+    left: calc(var(--width-menu) / 60 * 17);
+    rotate: 20deg;
+}
+
+.upper-bread .dot span:nth-child(8) {
+    top: calc(var(--width-menu) / 60 * 4);
+    left: calc(var(--width-menu) / 60 * 10);
+    rotate: -10deg;
+}
+
+.upper-bread .dot span:nth-child(9) {
+    top: 100px;
+    left: 80px;
+    rotate: -15deg;
+}
+
+.upper-bread .dot span:last-child {
+    top: calc(var(--width-menu) / 60 * 13);
+    left: calc(var(--width-menu) / 60 * 3);
+    rotate: -10deg;
+}
+
+.upper-bread > div:last-child {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--width-menu) / 60 * 3);
+    background-color: #ec8f28;
+}
+
+.cheese {
+    width: calc(var(--width-menu) / 6 * 4);
+    height: 0;
+    border-radius: calc(var(--width-menu) / 60);
+    background-color: #fbe689;
+    transition: 0.4s;
+}
+
+.cheese:nth-child(2) {
+    rotate: 20deg;
+}
+
+.cheese:nth-child(5) {
+    rotate: -20deg;
+}
+
+.burger-menu-open .cheese {
+    rotate: 0deg;
+    height: calc(var(--width-menu) / 60 * 8);
+}
+
+.sausage {
+    position: relative;
+    width: 100%;
+    height: calc(var(--width-menu) / 60 * 8);
+    border-radius: calc(var(--width-menu) / 60 * 4);
+    background-color: #992928;
+    overflow: hidden;
+}
+
+.sausage div:first-child {
+    position: absolute;
+    top: calc(var(--width-menu) / 60);
+    left: calc(var(--width-menu) / 50 * 2);
+    width: calc(var(--width-menu) / 60 * 8);
+    height: calc(var(--width-menu) / 60 * 2);
+    border-radius: calc(var(--width-menu) / 60);
+    background-color: #d18d68;
+    z-index: 1;
+    transition: 0.7s;
+}
+
+.burger-menu:hover .sausage div:first-child {
+    left: calc(var(--width-menu) - var(--width-menu) / 60 * 10);
+}
+
+.sausage div:last-child {
+    position: absolute;
+    top: calc(-1 * var(--width-menu) / 60 * 2);
+    width: var(--width-menu);
+    height: calc(var(--width-menu) / 60 * 8);
+    border-radius: calc(var(--width-menu) / 60 * 4);
+    background-color: #b6673c;
+}
+
+.sausage div:nth-child(2) {
+    position: absolute;
+    top: calc(-1 * var(--width-menu) / 60 * 8);
+    width: calc(var(--width-menu) / 60 * 24);
+    height: calc(var(--width-menu) / 60 * 12);
+    border-radius: calc(var(--width-menu) / 60 );
+    background-color: #fbe689;
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.sausage:nth-child(3) div:nth-child(2) {
+    left: calc(var(--width-menu) - var(--width-menu) / 60 * 34);
+    rotate: 20deg;
+}
+
+.sausage:nth-child(6) div:nth-child(2) {
+    left: calc(var(--width-menu) / 6);
+    rotate: -20deg;
+}
+
+.burger-menu-open .sausage div:nth-child(2) {
+    top: -300px;
+}
+
+.meat {
+    position: relative;
+    width: 90%;
+    height: calc(var(--width-menu) / 60 * 6);
+    display: flex;
+    align-items: center;
+    background-color: #da251c;
+    z-index: 1;
+}
+
+.meat > div {
+    position: absolute;
+    left: calc(var(--width-menu) / 60 * 2);
+    width: calc(var(--width-menu) / 60 * 20);
+    height: calc(var(--width-menu) / 60 * 4);
+    display: flex;
+    align-items: center;
+    background-color: #e8765b;
+    transition: 0.7s;
+}
+
+.burger-menu:hover .meat > div {
+    left: calc(var(--width-menu) - var(--width-menu) / 60 * 30);
+}
+
+.meat div div {
+    position: absolute;
+    left: calc(var(--width-menu) / 60);
+    width: calc(var(--width-menu) / 60 * 8);
+    height: calc(var(--width-menu) / 60 * 3);
+    background-color: #f0a399;
+    transition: 0.7s;
+}
+
+.burger-menu:hover .meat div div {
+    left: calc(var(--width-menu) - (var(--width-menu) / 60 * 50));
+}
+
+.lower-bread {
+    position: relative;
+    width: 100%;
+    height: calc(var(--width-menu) / 6);
+    border-radius: 20px 20px 60px 60px;
+    overflow: hidden;
+    background-color: #ec8f28;
+}
+
+.lower-bread div {
+    position: absolute;
+    top: calc(-1 * var(--width-menu) / 60 * 2);
+    width: var(--width-menu);
+    height: calc(var(--width-menu) / 6);
+    border-radius: calc(var(--width-menu) / 60 * 2) calc(var(--width-menu) / 60 * 2) calc(var(--width-menu) / 60 * 6) calc(var(--width-menu) / 60 * 6);
+    background-color: #f5b400;
+}
+
+ul {
+    width: 0;
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    overflow: hidden;
+    transition: 0.7s;
+    font-size: 30px;
+}
+
+.ul-open {
+    width: var(--width-menu);
+    height: calc(var(--height-menu) / 5 * 10);
+}
